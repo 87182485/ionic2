@@ -1,0 +1,47 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>iG Store</ion-title>
+  <ion-buttons end>
+    <button>
+      <ion-icon name="cart"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content class="getting-started buttons-fab-page">
+  <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
+  <ion-card *ngFor="#item of items">
+    <img class="card-img" src="{{item.imageUrl}}">
+    <ion-card-content no-margin>
+      <h2 class="card-title">
+            {{item.productName}}
+          </h2>
+      <p>
+        {{item.description}}
+      </p>
+    </ion-card-content>
+
+    <ion-row class="item-card-footer" no-padding>
+      <ion-col>
+        <button clear small light>
+                <ion-icon name='heart'></ion-icon>
+                Wishlist
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button clear small light (click)="navigateToDetail(item)">
+                <ion-icon name='eye'></ion-icon>
+                Detail
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button small secondary>
+                <ion-icon ios="logo-usd" md="logo-usd"></ion-icon>
+                {{item.price}}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

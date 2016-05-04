@@ -1,0 +1,28 @@
+.getting-started {
+
+  p {
+    margin: 20px 0;
+    line-height: 22px;
+    font-size: 16px;
+  }
+  
+  .card-img{
+    margin: 8px auto;
+    height:150px;
+    width:142px;
+  }
+  
+  ion-card-content{
+    background-color:darken(white, 5%);
+  }
+  
+  .item-card-footer{
+    background-color: #4F8FF7;
+  }
+}
+
+.fab-footer {
+  z-index: 99;
+      margin-right: 10px;
+    margin-bottom: 50px;
+}

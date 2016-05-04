@@ -1,0 +1,93 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-title>Lists</ion-title>
+    <ion-buttons end>
+        <button>
+      <ion-icon name="cart"></ion-icon>
+    </button>
+    </ion-buttons>
+</ion-navbar>
+
+<ion-content class="location-page">
+    <ion-card>
+        <div class="store-map">
+            <ion-row>
+                <ion-col class="store-location-col" width-25>
+                    <p>1</p>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block selected" name="square"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                </ion-col>
+                <ion-col class="store-location-col" width-25>
+                    <p>2</p>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                </ion-col>
+                <ion-col class="store-location-col" width-25>
+                    <p>3</p>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                </ion-col>
+                <ion-col class="store-location-col" width-25>
+                    <p>4</p>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                    <ion-icon class="icon-block" name="square-outline"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </div>    
+        <ion-item class="item-info">
+            <ion-avatar item-left>
+                <img src="{{item.imageUrl}}">
+            </ion-avatar>
+            <h2>{{item.productName}}</h2>
+            <p>{{item.description}}</p>
+        </ion-item>
+
+        <ion-item class="footer">
+            <span item-left>ailse: 1</span>
+            <span item-left>bin: 2</span>
+            <button primary clear item-right *ngIf="!item.isInCart">
+                <ion-icon name="add-circle"></ion-icon>
+                Add to cart
+            </button>
+            <div class="input-group" item-right *ngIf="item.isInCart">
+                <button outline>-</button>
+                <p class="number"><span>{{item.q}}</span></p>
+                <button outline>+</button>                
+            </div>
+        </ion-item>
+    </ion-card>
+</ion-content>
